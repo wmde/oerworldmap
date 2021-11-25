@@ -141,7 +141,7 @@ Configure variables for `conf/vhost.conf`
     Define PUBLIC_HOST oerworldmap.localhost
     Define PUBLIC_PORT 80
     Define PUBLIC_EMAIL webmaster@oerworldmap.localhost
-    Define AUTH_DIR /home/fo/local/src/oerworldmap/data
+    Define AUTH_DIR /srv/oerworldmap/data
     Define API_HOST http://localhost:9000
     Define UI_HOST http://localhost:3000
     Define KIBANA_HOST http://localhost:5601
@@ -178,16 +178,19 @@ Set up the hostname in `/etc/hosts`
 
 ### Setup Play! Application
 
-Download [sbt](http://www.scala-sbt.org/download.html) (version 0.13.11),  then
+The API server uses the [Play](https://www.playframework.com/) framework.  To compile,
+download [sbt](http://www.scala-sbt.org/download.html) (version 0.13.16),  then
 
     $ sbt clean stage; sbt run
+
+To run without rebuilding, use the `./startup.sh` script.
 
 #### Sbt on Ubuntu
 
 If you are running [bintray](https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html#Ubuntu+and+other+Debian-based+distributions) packages, make sure to install correct version:
 
 ```
-$ sudo apt-get install sbt=0.13.11
+$ sudo apt-get install sbt=0.13.16
 ```
 
 ### Install UI
@@ -227,7 +230,7 @@ export TERM=xterm-color
 > java.lang.NullPointerException
 > ```
 
-Make sure your sbt is correct version (0.13.11).
+Make sure your sbt is correct version (0.13.16).
 
 
 
@@ -273,6 +276,24 @@ When updating vocabulary definitions, you need to update triple store by running
 
 
 ## Contribute
+
+### Running for development
+
+
+    mkdir -p data/consents/objects
+    touch data/consents/history
+    mkdir -p data/commits/objects/
+    touch data/commits/history
+
+    cp docker/application.docker.conf conf/application.conf
+    cp docker/ui.env ui/.env
+    cp docker/entrypoint-ui.sh ui/entrypoint-ui.sh
+
+    docker-compose -f docker/docker-compose.yml up
+
+The application is available at http://localhost:9000/
+
+To administer keycloak, browse to http://localhost:9001/ and log in with "user" / "password".
 
 ### Coding conventions
 

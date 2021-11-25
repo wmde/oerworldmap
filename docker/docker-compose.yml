@@ -1,0 +1,86 @@
+version: '3.7'
+services:
+  scala:
+    build:
+      context: ..
+      dockerfile: docker/scala.Dockerfile
+      args:
+        # FIXME: reconcile available versions with README
+        SBT_VERSION: '0.13.16'
+        SCALA_VERSION: '2.11.7'
+    volumes:
+      - ..:/srv/oerworldmap
+      - ../cache/scala-homedir:/root
+    # TODO: split build and run, if possible?
+    # TODO: production variant uses ./startup.sh
+    command: 'sh -c "sbt stage && sbt run"'
+    ports:
+      - '9000:9000'
+    depends_on:
+      - elasticsearch
+    # FIXME: `sbt run` dies when `< /dev/null` so we need to connect to the terminal, for now.
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+  
+  ui:
+    build:
+      dockerfile: docker/ui.Dockerfile
+      context: ..
+    volumes:
+      - ../ui:/srv/oerworldmap-ui
+    expose:
+      - 3000
+
+  pages:
+      image: jekyll/jekyll:pages
+      command: jekyll serve --watch --incremental
+      expose:
+          - 4000
+      volumes:
+          - ../ui:/srv/jekyll
+
+
+  httpd:
+    build:
+      dockerfile: docker/httpd.Dockerfile
+      context: ..
+    volumes:
+      - ..:/srv/oerworldmap
+    ports:
+      - '8080:80'
+  
+  elasticsearch:
+    build:
+      dockerfile: docker/elasticsearch.Dockerfile
+      context: ..
+    expose:
+      - 9200
+    #volumes:
+      # TODO:
+      #- ../tmp
+  
+  keycloak:
+    image: bitnami/keycloak:latest
+    ports:
+      - "9001:8080"
+    depends_on:
+      - postgresql
+    environment:
+      - KEYCLOAK_DATABASE_PASSWORD=password
+      - KEYCLOAK_ADMIN_PASSWORD=password
+  
+#  node-modules:
+#    image: 'node:latest'
+#    working_dir: /home/node/app
+#    # TODO: Why is this done in travis but not the README?
+#    command: npm install node-python
+#    volumes:
+#      - ..:/home/node/app
+
+  postgresql:
+    image: postgres:latest
+    # TODO: volumes
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=bn_keycloak
+      - POSTGRES_DB=bitnami_keycloak
