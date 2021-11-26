@@ -32,12 +32,12 @@ services:
       - 3000
 
   pages:
-      image: jekyll/jekyll:pages
+      image: jekyll/jekyll:stable
       command: jekyll serve --watch --incremental
       expose:
           - 4000
       volumes:
-          - ../ui:/srv/jekyll
+          - ../ui/docs:/srv/jekyll
 
 
   httpd:
