@@ -68,6 +68,7 @@ services:
     environment:
       - KEYCLOAK_DATABASE_PASSWORD=password
       - KEYCLOAK_ADMIN_PASSWORD=password
+      - KEYCLOAK_EXTRA_ARGS=-Dkeycloak.profile.feature.scripts=enabled
   
 #  node-modules:
 #    image: 'node:latest'
