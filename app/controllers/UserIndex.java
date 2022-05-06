@@ -26,7 +26,7 @@ public class UserIndex extends OERWorldMap {
   }
 
   public Result getProfile() {
-    String profileId = request().getHeader(OIDC_CLAIM_PROFILE_ID);
+    String profileId = "123"; // XXX
     Resource profile;
     boolean persistent = false;
     if (StringUtils.isEmpty(profileId)) {
@@ -59,7 +59,7 @@ public class UserIndex extends OERWorldMap {
     ObjectNode result = mObjectMapper.createObjectNode();
     result.put("persistent", persistent);
     result.put("username", request().username());
-    String groups = request().getHeader(OIDC_CLAIM_GROUPS);
+    String groups = ""; // XXX
     if (StringUtils.isEmpty(groups)) {
       result.set("groups", mObjectMapper.createArrayNode());
     } else {
@@ -74,10 +74,10 @@ public class UserIndex extends OERWorldMap {
     ObjectNode profileNode = mObjectMapper.createObjectNode()
       .put(JsonLdConstants.CONTEXT, mConf.getString("jsonld.context"))
       .put("@type", "Person")
-      .put("@id", "urn:uuid:".concat(request().getHeader(OIDC_CLAIM_SUB)))
+      .put("@id", "urn:uuid:".concat("subfoo")) // XXX
       .put("email", request().username());
     profileNode.set("name", mObjectMapper.createObjectNode()
-      .put("en", request().getHeader(OIDC_CLAIM_NAME))
+      .put("en", "Foo") // XXX
     );
     return(Resource.fromJson(profileNode));
   }
