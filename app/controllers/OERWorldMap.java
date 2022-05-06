@@ -13,7 +13,6 @@ import play.Logger;
 import play.mvc.Controller;
 import play.mvc.With;
 import services.AccountService;
-import services.KeycloakAccountService;
 import services.MemoryAccountService;
 import services.QueryContext;
 import services.repository.BaseRepository;
@@ -55,21 +54,7 @@ public abstract class OERWorldMap extends Controller {
   }
 
   private static synchronized void createAccountService(Configuration aConf) {
-    Configuration keycloakConfig = aConf.getConfig("keycloak");
-    if (mAccountService == null) {
-      if (keycloakConfig != null) {
-        mAccountService = new KeycloakAccountService(
-          keycloakConfig.getString("serverUrl"),
-          keycloakConfig.getString("realm"),
-          keycloakConfig.getString("username"),
-          keycloakConfig.getString("password"),
-          keycloakConfig.getString("client"),
-          new File(aConf.getString("ht.permissions")));
-        mAccountService.setApache2Ctl(aConf.getString("ht.apache2ctl.restart"));
-      } else {
-        mAccountService = new MemoryAccountService();
-      }
-    }
+    mAccountService = new MemoryAccountService();
   }
 
   private static synchronized void createSchemaValidator(Configuration aConf) {
