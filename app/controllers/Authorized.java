@@ -11,15 +11,15 @@ import java.util.concurrent.CompletionStage;
  */
 class Authorized extends Action.Simple {
 
-  private static final String OIDC_CLAIM_SUB = "oidc_claim_sub";
-  private static final String OIDC_CLAIM_EMAIL = "oidc_claim_email";
+  private static final String USERNAME_HEADER = "X-username";
+  private static final String USERID_HEADER = "X-userid";
 
   @Override
   public CompletionStage<Result> call(Http.Context ctx) {
-    if (ctx.request().hasHeader(OIDC_CLAIM_SUB)
-      && ctx.request().hasHeader(OIDC_CLAIM_EMAIL)
+    if (ctx.request().hasHeader(USERNAME_HEADER)
+      && ctx.request().hasHeader(USERID_HEADER)
     ) {
-      ctx.request().setUsername(ctx.request().getHeader(OIDC_CLAIM_EMAIL));
+      ctx.request().setUsername(ctx.request().getHeader(USERNAME_HEADER));
     }
     return delegate.call(ctx);
   }

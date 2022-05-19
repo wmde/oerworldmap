@@ -14,11 +14,8 @@ import javax.inject.Inject;
 import java.io.IOException;
 
 public class UserIndex extends OERWorldMap {
-
-  private static final String OIDC_CLAIM_PROFILE_ID = "oidc_claim_profile_id";
-  private static final String OIDC_CLAIM_GROUPS = "oidc_claim_groups";
-  private static final String OIDC_CLAIM_NAME = "oidc_claim_name";
-  private static final String OIDC_CLAIM_SUB = "oidc_claim_sub";
+  private static final String USERNAME_HEADER = "X-username";
+  private static final String USERID_HEADER = "X-userid";
 
   @Inject
   public UserIndex(Configuration aConf, Environment aEnv) {
@@ -26,7 +23,13 @@ public class UserIndex extends OERWorldMap {
   }
 
   public Result getProfile() {
-    String profileId = "123"; // XXX
+    String profileId = request().getHeader(USERNAME_HEADER);
+    if (profileId == null) {
+      // FIXME: Is this accidentally creating a persistent thing?
+      ObjectNode result = mObjectMapper.createObjectNode();
+      result.put("error", "no user");
+      return unauthorized(result);
+    }
     Resource profile;
     boolean persistent = false;
     if (StringUtils.isEmpty(profileId)) {
@@ -59,7 +62,7 @@ public class UserIndex extends OERWorldMap {
     ObjectNode result = mObjectMapper.createObjectNode();
     result.put("persistent", persistent);
     result.put("username", request().username());
-    String groups = ""; // XXX
+    String groups = ""; // Don't map wiki groups to this app.
     if (StringUtils.isEmpty(groups)) {
       result.set("groups", mObjectMapper.createArrayNode());
     } else {
@@ -74,10 +77,10 @@ public class UserIndex extends OERWorldMap {
     ObjectNode profileNode = mObjectMapper.createObjectNode()
       .put(JsonLdConstants.CONTEXT, mConf.getString("jsonld.context"))
       .put("@type", "Person")
-      .put("@id", "urn:uuid:".concat("subfoo")) // XXX
+      .put("@id", "urn:uuid:".concat(request().getHeader(USERID_HEADER)))
       .put("email", request().username());
     profileNode.set("name", mObjectMapper.createObjectNode()
-      .put("en", "Foo") // XXX
+      .put("en", request().getHeader(USERNAME_HEADER))
     );
     return(Resource.fromJson(profileNode));
   }
