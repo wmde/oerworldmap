@@ -23,15 +23,17 @@ public class UserIndex extends OERWorldMap {
   }
 
   public Result getProfile() {
-    String profileId = request().getHeader(USERNAME_HEADER);
+    String profileId = request().getHeader(USERID_HEADER);
     if (profileId == null) {
       // FIXME: Is this accidentally creating a persistent thing?
       ObjectNode result = mObjectMapper.createObjectNode();
       result.put("error", "no user");
       return unauthorized(result);
     }
+    profileId = "urn:uuid:".concat(profileId);
     Resource profile;
     boolean persistent = false;
+    Logger.warn("Searching for profile for " + profileId);
     if (StringUtils.isEmpty(profileId)) {
       profile = newProfile();
     } else {
@@ -49,6 +51,7 @@ public class UserIndex extends OERWorldMap {
   public Result createProfile() throws IOException {
     Resource profile = Resource.fromJson(getJsonFromRequest());
     String username = request().username();
+    Logger.warn("Creating profile for " + profile.getId());
     boolean isNew = !mBaseRepository.hasResource(profile.getId());
     mBaseRepository.addResource(profile, getMetadata());
     if (isNew) {
@@ -77,8 +80,7 @@ public class UserIndex extends OERWorldMap {
     ObjectNode profileNode = mObjectMapper.createObjectNode()
       .put(JsonLdConstants.CONTEXT, mConf.getString("jsonld.context"))
       .put("@type", "Person")
-      .put("@id", "urn:uuid:".concat(request().getHeader(USERID_HEADER)))
-      .put("email", request().username());
+      .put("@id", "urn:uuid:".concat(request().getHeader(USERID_HEADER)));
     profileNode.set("name", mObjectMapper.createObjectNode()
       .put("en", request().getHeader(USERNAME_HEADER))
     );
