@@ -2039,15 +2039,6 @@
             "placeholder": "http://example.org/"
           }
         },
-        "email": {
-          "title": "Person.email",
-          "description": "descriptions.Person.email",
-          "type": "string",
-          "format": "email",
-          "_display": {
-            "placeholder": "user@example.org"
-          }
-        },
         "description": {
           "title": "Person.description",
           "description": "descriptions.Person.description",
