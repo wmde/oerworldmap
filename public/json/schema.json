@@ -3492,7 +3492,6 @@
           "$ref": "#/definitions/Country"
         }
       },
-      "required": [ "addressCountry" ],
       "additionalProperties": false
     },
     "LikeAction": {
