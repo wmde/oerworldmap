@@ -2342,9 +2342,7 @@
           }
         }
       },
-      "required": [
-        "name", "location"
-      ],
+      "required": ["name"],
       "additionalProperties": false
     },
     "Organization": {
