@@ -2219,6 +2219,9 @@
               { "$ref": "#/definitions/Link" },
               { "properties": { "@type": { "enum": [ "Event" ] } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "performerIn": {
@@ -2230,6 +2233,9 @@
               { "$ref": "#/definitions/Link" },
               { "properties": { "@type": { "enum": [ "Event" ] } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "attends": {
@@ -2241,6 +2247,9 @@
               { "$ref": "#/definitions/Link" },
               { "properties": { "@type": { "enum": [ "Event" ] } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "primarySector": {
@@ -2262,6 +2271,9 @@
                 }
               } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "secondarySector": {
@@ -2282,6 +2294,9 @@
                 }
               } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "activityField": {
@@ -2302,6 +2317,9 @@
                 }
               } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "publication": {
@@ -2313,6 +2331,9 @@
               { "$ref": "#/definitions/Link" },
               { "properties": { "@type": { "enum": [ "WebPage", "Policy" ] } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "manufactured": {
@@ -2559,7 +2580,7 @@
           "items": {
             "allOf": [
               { "$ref": "#/definitions/Link" },
-              { "properties": { "@type": { "enum": [ "Organization", "Service", "Action" ] } } }
+              { "properties": { "@type": { "enum": [ "Organization", "Service" ] } } }
             ]
           },
           "_display": {
@@ -2612,6 +2633,9 @@
               { "$ref": "#/definitions/Link" },
               { "properties": { "@type": { "enum": [ "Event" ] } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "keywords": {
@@ -2678,6 +2702,9 @@
                 }
               } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "secondarySector": {
@@ -2698,6 +2725,9 @@
                 }
               } } }
             ]
+          },
+          "_display": {
+            "className": "hidden"
           }
         },
         "manufactured": {
