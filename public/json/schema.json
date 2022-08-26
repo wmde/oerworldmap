@@ -117,7 +117,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/publications.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/publications.json"
                     ]
                   }
                 }
@@ -197,7 +197,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/licenses.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/licenses.json"
                     ]
                   }
                 }
@@ -265,7 +265,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -285,7 +285,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -408,7 +408,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/policyTypes.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/policyTypes.json"
                     ]
                   }
                 }
@@ -456,7 +456,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/policies.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/policies.json"
                     ]
                   }
                 }
@@ -501,7 +501,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -521,7 +521,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -613,7 +613,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/licenses.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/licenses.json"
                     ]
                   }
                 }
@@ -957,7 +957,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -977,7 +977,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -997,7 +997,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/licenses.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/licenses.json"
                     ]
                   }
                 }
@@ -1169,7 +1169,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/projects.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/projects.json"
                     ]
                   }
                 }
@@ -1427,7 +1427,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -1447,7 +1447,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -1569,7 +1569,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/services.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/services.json"
                     ]
                   }
                 }
@@ -1625,7 +1625,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/licenses.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/licenses.json"
                     ]
                   }
                 }
@@ -1882,7 +1882,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -1902,7 +1902,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -2022,7 +2022,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/persons.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/persons.json"
                     ]
                   }
                 }
@@ -2265,7 +2265,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -2288,7 +2288,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -2311,7 +2311,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/activities.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/activities.json"
                     ]
                   }
                 }
@@ -2417,7 +2417,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/organizations.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/organizations.json"
                     ]
                   }
                 }
@@ -2696,7 +2696,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -2719,7 +2719,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -3019,7 +3019,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -3039,7 +3039,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -3206,7 +3206,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }
@@ -3226,7 +3226,7 @@
                 "properties": {
                   "@id": {
                     "enum": [
-                      "https://oerworldmap.org/assets/json/sectors.json"
+                      "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
                     ]
                   }
                 }

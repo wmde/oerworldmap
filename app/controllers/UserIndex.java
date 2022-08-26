@@ -35,6 +35,7 @@ public class UserIndex extends OERWorldMap {
     boolean persistent = false;
     Logger.warn("Searching for profile for " + profileId);
     if (StringUtils.isEmpty(profileId)) {
+      Logger.warn("creating new profile for empty ID");
       profile = newProfile();
     } else {
       profile = mBaseRepository.getResource(profileId);
