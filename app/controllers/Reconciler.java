@@ -40,7 +40,7 @@ public class Reconciler extends OERWorldMap {
   public Result meta(String aCallback) {
     ObjectNode result = Json.newObject();
     result.put("name", "oerworldmap reconciliation");
-    result.put("identifierSpace", "https://oerworldmap.org/resource");
+    result.put("identifierSpace", "https://capacity-exchange.wmcloud.org/resource");
     result.put("schemaSpace", "http://schema.org");
     ArrayNode defaultTypes = Json.newArray();
     Resource.mIdentifiedTypes.forEach(x -> {
@@ -50,7 +50,7 @@ public class Reconciler extends OERWorldMap {
       defaultTypes.add(defaultType);
     });
     result.set("defaultTypes", defaultTypes);
-    result.set("view", Json.newObject().put("url", "https://oerworldmap.org/resource/{{id}}"));
+    result.set("view", Json.newObject().put("url", "https://capacity-exchange.wmcloud.org/resource/{{id}}"));
     return StringUtils.isEmpty(aCallback) ? ok(result)
       : ok(String.format("/**/%s(%s);", aCallback, result.toString()));
   }

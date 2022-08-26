@@ -211,7 +211,7 @@
       "@type": "Concept"
     }
   ],
-  "@context": "https://oerworldmap.org/assets/json/context.json",
+  "@context": "https://capacity-exchange.wmcloud.org/assets/json/context.json",
   "@id": "https://w3id.org/isced/1997/scheme",
   "@type": "ConceptScheme"
 }

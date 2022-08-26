@@ -1,13 +1,13 @@
 {
-  "@context": "https://oerworldmap.org/assets/json/context.json",
-  "@id": "https://oerworldmap.org/assets/json/sectors.json",
+  "@context": "https://capacity-exchange.wmcloud.org/assets/json/context.json",
+  "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json",
   "@type": "ConceptScheme",
   "hasTopConcept": [
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#earlyChildhood",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#earlyChildhood",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -20,14 +20,14 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     },
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#school",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#school",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -40,14 +40,14 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     },
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#higherEd",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#higherEd",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -60,14 +60,14 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     },
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#vocational",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#vocational",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -80,14 +80,14 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     },
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#further",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#further",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -100,14 +100,14 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     },
     {
-      "@id": "https://oerworldmap.org/assets/json/sectors.json#general",
+      "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json#general",
       "@type": "Concept",
       "inScheme": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       },
       "name": [
         {
@@ -120,7 +120,7 @@
         }
       ],
       "topConceptOf": {
-        "@id": "https://oerworldmap.org/assets/json/sectors.json"
+        "@id": "https://capacity-exchange.wmcloud.org/assets/json/sectors.json"
       }
     }
   ]
