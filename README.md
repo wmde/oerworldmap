@@ -279,6 +279,10 @@ When updating vocabulary definitions, you need to update triple store by running
 
 ### Running for development
 
+    git submodule init
+    git submodule update
+
+Check if `ui/docs` is writable, otherwise jekyll fails to start in the conainer
 
     mkdir -p data/consents/objects
     touch data/consents/history
