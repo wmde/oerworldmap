@@ -1,6 +1,6 @@
 FROM broadinstitute/openidc-proxy AS openidc
 
-FROM httpd:latest
+FROM httpd:2.4.51-buster
 
 RUN apt-get update \
     && apt-get install -y \

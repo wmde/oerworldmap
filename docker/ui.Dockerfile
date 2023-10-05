@@ -1,4 +1,6 @@
-FROM node:12
+FROM node:12.22.7
 WORKDIR /srv/oerworldmap-ui
 
-ENTRYPOINT [ "/srv/oerworldmap-ui/entrypoint-ui.sh" ]
+COPY docker/entrypoint-ui.sh /srv
+
+ENTRYPOINT [ "/srv/entrypoint-ui.sh" ]

@@ -32,11 +32,12 @@ services:
       - 3000
 
   pages:
-      image: jekyll/jekyll:stable
+      image: jekyll/jekyll:4.2.0
       command: jekyll serve --watch --incremental
       expose:
           - 4000
       volumes:
+          # must be writable
           - ../ui/docs:/srv/jekyll
 
 
@@ -55,12 +56,16 @@ services:
       context: ..
     expose:
       - 9200
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
     #volumes:
       # TODO:
       #- ../tmp
   
   keycloak:
-    image: bitnami/keycloak:latest
+    image: bitnami/keycloak:15.0.2-debian-10-r94
     ports:
       - "9001:8080"
     depends_on:
@@ -79,7 +84,8 @@ services:
 #      - ..:/home/node/app
 
   postgresql:
-    image: postgres:latest
+    # https://github.com/docker-library/postgres/issues/1100#issuecomment-1599660628
+    image: postgres:12-bullseye
     # TODO: volumes
     environment:
       - POSTGRES_PASSWORD=password
